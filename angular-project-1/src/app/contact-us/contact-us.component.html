@@ -1,1 +1,191 @@
-<p>contact-us works!</p>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <i class="fa fa-search fa-lg text-warning"></i> Yamaha Bike Showroom</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link"  routerLink="/home"> <i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
+                        class="fa fa-tools"></i> Our Services </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" routerLink="/services">Software Marketing</a></li>
+                      <li><a class="dropdown-item" routerLink="/software-marketing">Content Writing</a></li>
+                      <li><a class="dropdown-item" routerLink="/consultancy">Software Testing</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact-us">
+                      <i class="fa fa-map-marker"></i> Contact Us
+                    </a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link"  routerLink="/graphs">
+                        <i class="fa fa-tools"></i> Graphs
+                    </a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<section class="p-5 bg-light">
+    <div class="container">
+        <div class="row m-5">
+            <div class="col-lg-6">
+                <div class="border border-primary p-3 rounded">
+                    <h3 class="text-center"> Reach Us Here.... </h3> <hr/>
+                    <form [formGroup]="registerform" (ngSubmit)="onSubmit()">
+                        <div class="mb-2">
+                            <div class="form-group">
+                                <label for="FirstName" class="form-label">Enter Your Name <span>*</span></label>
+                                <input type="text" placeholder="Enter Your Name" formControlName="FirstName" class="form-control" id="FirstName"
+                                    [ngClass]="{ 'is-invalid': submitted && f['FirstName'].errors }"
+                                    aria-describedby="FirstName">
+                                <div *ngIf="submitted && f['FirstName'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['FirstName'].errors['required']">Name is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1" class="form-label">Email
+                                    address<span>*</span></label>
+                                <input type="email" placeholder="Enter Your Email" formControlName="email" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['email'].errors['required']">Email is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="form-group">
+                                <label for="Mobile" class="form-label">Mobile Number<span>*</span></label>
+                                <input type="number" placeholder="Enter Your Mobile Number" formControlName="Mobile" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f['Mobile'].errors }" id="Mobile"
+                                    aria-describedby="Mobile">
+                                <div *ngIf="submitted && f['Mobile'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['Mobile'].errors['required']">Mobile is required</div>
+                                    <div *ngIf="f['Mobile'].errors['pattern']">Please, Enter 10 digit Mobile Number.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="form-group">
+                                <label for="textarea" class="form-label">Send Message<span>*</span></label>
+                                <textarea placeholder="Enter Your Message" formControlName="textarea" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f['textarea'].errors }"
+                                    id="textarea"></textarea>
+                                <div *ngIf="submitted && f['textarea'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['textarea'].errors['required']">Message is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-success submit">
+                                <i class="fa fa-envelope text-warning"> </i> Send Message </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!----4 end----->
+            <div class="col-lg-6 offset-right-3">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Our Office Adress</h4>
+                    </div>
+                    <div class="card-body">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.239463007243!2d78.37294541418842!3d17.448249105641107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93cfef34a9e1%3A0x9ebd6ff137acb6f1!2sPeople%20Tech%20Group!5e0!3m2!1sen!2sin!4v1650652726506!5m2!1sen!2sin"
+                            width="546" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="card-footer bg-danger text-white">
+                        saturday + sunday is holiday
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="text-info">Our Service Partners</h3>
+            </div>
+        </div>
+        <!----row end------>
+    </div>
+    <div class="row mt-4">
+        <div class="col-lg-2"> <img src="assets/bike-1.jpg" class="img-fluid"> </div>
+        <div class="col-lg-2"> <img src="assets/bike-2.jpg" class="img-fluid"> </div>
+        <div class="col-lg-2"> <img src="assets/bike-3.jpg" class="img-fluid"> </div>
+        <div class="col-lg-2"> <img src="assets/bike-4.jpg" class="img-fluid"> </div>
+        <div class="col-lg-2"> <img src="assets/bike-5.jpg" class="img-fluid"> </div>
+        <div class="col-lg-2"> <img src="assets/bike-6.jpg" class="img-fluid"> </div>
+    </div>
+</section>
+
+<section class="bg-primary p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center text-white">
+                <p class="text-white g-danger p-2"> Yamaha Bike Showroom </p>
+                <p> Follow us on Social Media </p>
+                <p>
+                    <i class="fab fa-facebook fa-2x m-2"></i>
+                    <i class="fab fa-twitter fa-2x m-2"></i>
+                    <i class="fab fa-linkedin fa-2x m-2"></i>
+                    <i class="fab fa-angular fa-2x m-2"></i>
+                    <i class="fab fa-java fa-2x m-2"></i>
+                    <i class="fab fa-react fa-2x m-2"></i>
+                    <i class="fab fa-google fa-2x m-2"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-----login modal start here----->
+<div class="modal fade" id="userlogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Customer Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label>E-Mail Id</label>
+                    <input type="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label> Password </label>
+                    <input type="password" class="form-control">
+                </div>
+            </div>
+
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-success">Login</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----Login Modal end here------>
