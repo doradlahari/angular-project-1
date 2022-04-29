@@ -11,11 +11,7 @@ import { RepairingPointComponent } from './repairing-point/repairing-point.compo
 import { MarketingComponent } from './marketing/marketing.component';
 import { ConsultancyComponent } from './consultancy/consultancy.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { PlotlyGraphsComponent } from './plotly-graphs/plotly-graphs.component';
 import { CommonModule } from '@angular/common';
-import * as PlotlyJS from 'plotly.js-dist-min';
-import { PlotlyModule } from 'angular-plotly.js';
-PlotlyModule.plotlyjs = PlotlyJS;
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +23,6 @@ PlotlyModule.plotlyjs = PlotlyJS;
     MarketingComponent,
     ConsultancyComponent,
     ContactUsComponent,
-    PlotlyGraphsComponent,
  
   ],
   imports: [
@@ -35,7 +30,6 @@ PlotlyModule.plotlyjs = PlotlyJS;
     AppRoutingModule,
     ReactiveFormsModule,
     CommonModule,
-    PlotlyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

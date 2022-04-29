@@ -5,7 +5,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MarketingComponent } from './marketing/marketing.component';
-import { PlotlyGraphsComponent } from './plotly-graphs/plotly-graphs.component';
 import { ServicesComponent } from './services/services.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 
@@ -17,7 +16,6 @@ const routes: Routes = [
   {path:'services',component:ServicesComponent},
   {path:'software-marketing',component:MarketingComponent},
   {path:'consultancy',component:ConsultancyComponent},
-  {path:'graphs',component:PlotlyGraphsComponent}
 ];
 
 @NgModule({
