@@ -1,0 +1,39 @@
+<!-- display contacts list in card format -->
+<div class="row m-5 p-3">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-3 mb-3">
+        <div class="card list-group-item-info shadow">
+            <div class="card-body">
+                <div class="row">
+                    <span class="text-end">   <a class=" fa fa-user-plus text-decoration-none btn-primary p-2 mt-4 rounded" routerLink="/crud"></a></span>
+                    <h2 class="text-center mb-5"> Contact List </h2> 
+                  
+                        <!-- image here -->
+                        <div class="col-sm-4">
+                            <img src="assets/user.jfif" style="width: 100px; height: 100px;" class="img-icon">
+                        </div>
+                        <!-- details here -->
+                        <div class="col-sm-7">
+                            <ul class="list-group">
+                                <li class="list-group-item"> Name: <span> Hari </span> </li>
+                                <li class="list-group-item"> E-mail: <span> doradla.hari@gmail.com </span></li>
+                                <li class="list-group-item"> Age: <span> 23 Years </span> </li>
+                            </ul>
+                        </div>
+                       
+                        <!-- options here -->
+                        <div class="col-sm-1">
+                            <a routerLink="/view-contact" class="btn btn-warning m-2">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <a routerLink="/edit-contact" class="btn btn-primary m-2">
+                                <i class="fa fa-pen"></i>
+                            </a>
+                            <button class="btn btn-danger m-2">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

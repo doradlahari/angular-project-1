@@ -16,6 +16,9 @@ import { PlotlyGraphsComponent } from './plotly-graphs/plotly-graphs.component';
 import * as PlotlyJS from 'plotly.js-dist-min';
 import { PlotlyModule } from 'angular-plotly.js';
 import { CrudComponent } from './crud/crud.component';
+import { ContactManagerComponent } from './contact-manager/contact-manager.component';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
+import { ViewContactComponent } from './view-contact/view-contact.component';
 
 PlotlyModule.plotlyjs = PlotlyJS;
 @NgModule({
@@ -31,6 +34,9 @@ PlotlyModule.plotlyjs = PlotlyJS;
     ContactUsComponent,
     PlotlyGraphsComponent,
     CrudComponent,
+    ContactManagerComponent,
+    EditContactComponent,
+    ViewContactComponent,
  
   ],
   imports: [

@@ -19,7 +19,7 @@
                         aria-expanded="false">
                         <i class="fa fa-tools"></i> Our Services </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" routerLink="/services">Software Marketing</a></li>
+                        <li><a class="dropdown-item" routerLink="/contact-manager">Contact-Manager</a></li>
                         <li><a class="dropdown-item" routerLink="/software-marketing">Content Writing</a></li>
                         <li><a class="dropdown-item" routerLink="/consultancy">Software Testing</a></li>
                     </ul>
@@ -34,12 +34,16 @@
                         <i class="fa fa-chart-area"></i> Graphs
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" routerLink="/crud">
-                        <i class="fa fa-building"></i> CRUD
-                    </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa fa-building"></i> CRUD </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/contact-manager">Contact-Manager</a></li>
+                        <li><a class="dropdown-item" routerLink="/view-contact">View Contact List</a></li>
+                        <li><a class="dropdown-item" routerLink="/edit-contact">Edit Contact</a></li>
+                    </ul>
                 </li>
-
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -68,49 +72,11 @@
 <div class="row m-5 p-3">
     <div
         class="col-xl-12 text-center col-lg-12 col-md-8 col-sm-12 col-12 mb-3 bg-light shadow rounded border border-info p-3">
-        <h4 class="text-center"> Contact List.......... </h4>
+        <h4 class="text-center"> Add New User Here </h4>
         <input type="text" class="form-control mb-2" placeholder=" Enter Name"> <br />
         <input type="number" class="form-control mb-2" placeholder="Enter Age"> <br />
         <input type="email" class="form-control mb-2" placeholder="Enter E-mail"> <br />
         <input type="file" class="form-control mb-2"> <br />
-        <button class="btn btn-primary"> Add User </button>
-    </div>
-</div>
-
-
-<!-- display contacts list in card format -->
-<div class="row m-5 p-3">
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-3 mb-3">
-        <div class="card list-group-item-info shadow">
-            <div class="card-body">
-                <div class="row">
-                    
-                        <!-- image here -->
-                        <div class="col-sm-4">
-                            <img src="assets/user.jfif" style="width: 100px; height: 100px;" class="img-icon">
-                        </div>
-                        <!-- details here -->
-                        <div class="col-sm-7">
-                            <ul class="list-group">
-                                <li class="list-group-item"> Name: <span> Hari </span> </li>
-                                <li class="list-group-item"> E-mail: <span> doradla.hari@gmail.com </span></li>
-                                <li class="list-group-item"> Age: <span> 23 Years </span> </li>
-                            </ul>
-                        </div>
-                        <!-- options here -->
-                        <div class="col-sm-1">
-                            <a href="#" class="btn btn-warning m-2">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                            <a href="#" class="btn btn-primary m-2">
-                                <i class="fa fa-pen"></i>
-                            </a>
-                            <button class="btn btn-danger m-2">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                        </div>
-                </div>
-            </div>
-        </div>
+        <button class="btn btn-primary" routerLink="/contact-manager"> Add User </button>
     </div>
 </div>
