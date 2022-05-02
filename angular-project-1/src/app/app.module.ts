@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 import { PlotlyGraphsComponent } from './plotly-graphs/plotly-graphs.component';
 import * as PlotlyJS from 'plotly.js-dist-min';
 import { PlotlyModule } from 'angular-plotly.js';
+import { CrudComponent } from './crud/crud.component';
 
 PlotlyModule.plotlyjs = PlotlyJS;
 @NgModule({
@@ -29,6 +30,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
     ConsultancyComponent,
     ContactUsComponent,
     PlotlyGraphsComponent,
+    CrudComponent,
  
   ],
   imports: [
