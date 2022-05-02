@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <i class="fa fa-search fa-lg text-warning"></i> Yamaha Bike Showroom
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home">
+                        <i class="fa fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa fa-tools"></i> Our Services </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/services">Software Marketing</a></li>
+                        <li><a class="dropdown-item" routerLink="/software-marketing">Content Writing</a></li>
+                        <li><a class="dropdown-item" routerLink="/consultancy">Software Testing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact-us">
+                        <i class="fa fa-map-marker"></i> Contact Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/graphs">
+                        <i class="fa fa-chart-area"></i> Graphs
+                    </a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<section class="p-5">
+    <div class="row m-5 p-3">
+        <div class="col-xl-12 col-lg-12 col-md-8 col-sm-12 col-12 mb-3 bg-light shadow rounded border border-info p-3">
+            <h1 class="text-center">Plotly Graphs </h1>
+            <hr />
+            <p class="text-center">What is the purpose of Plotly?</p>
+            <p class="h6 bg-light"><span class="h1 fw-bolder">.</span> Image result for what is use of plotly.js
+                Plotly provides online graphing, analytics, and statistics tools for individuals and collaboration, as
+                well as scientific graphing libraries for Python, R, MATLAB, Perl, Julia, Arduino, and REST.</p>
+        </div>
+    </div>
+    <!------ card starts ------->
+    <div class="row m-5 p-3">
+        <!------ card-1 starts ------->
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> A Fancy Graph </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]="Fancy.data" [layout]="Fancy.layout"></plotly-plot>
+                </div>
+            </div>
+        </div>
+
+        <!------ card-2 starts ------->
+
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -2 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]="Barchart.data" [layout]="Barchart.layout" [useResizeHandler]="true"
+                        [style]="{position:'relative',width: '100%', height: '100%'}">
+                    </plotly-plot>
+
+                </div>
+            </div>
+        </div>
+
+        <!------ card-3 starts ------->
+
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -3 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]="LineChart.data" [layout]="LineChart.layout" [useResizeHandler]="true"
+                        [style]="{position:'relative',width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

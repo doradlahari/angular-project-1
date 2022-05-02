@@ -11,7 +11,12 @@ export class SignInComponent implements OnInit {
   submitted!: boolean;
   constructor(private formBuilder: FormBuilder, private router: Router,) {
     this.loginForm = this.formBuilder.group({
-      email: ['', Validators.required],
+      email: ['',[
+        Validators.required,
+        Validators.email,
+        Validators.
+        pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')
+      ],],
       password: ['', Validators.required],
     });
   }

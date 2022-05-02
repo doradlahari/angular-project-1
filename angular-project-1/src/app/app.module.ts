@@ -12,6 +12,11 @@ import { MarketingComponent } from './marketing/marketing.component';
 import { ConsultancyComponent } from './consultancy/consultancy.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CommonModule } from '@angular/common';
+import { PlotlyGraphsComponent } from './plotly-graphs/plotly-graphs.component';
+import * as PlotlyJS from 'plotly.js-dist-min';
+import { PlotlyModule } from 'angular-plotly.js';
+
+PlotlyModule.plotlyjs = PlotlyJS;
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +28,7 @@ import { CommonModule } from '@angular/common';
     MarketingComponent,
     ConsultancyComponent,
     ContactUsComponent,
+    PlotlyGraphsComponent,
  
   ],
   imports: [
@@ -30,6 +36,7 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     ReactiveFormsModule,
     CommonModule,
+    PlotlyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

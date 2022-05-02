@@ -16,6 +16,7 @@
                                 aria-describedby="emailHelp">
                             <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
                                 <div *ngIf="f['email'].errors['required']">Email is required</div>
+                                <div *ngIf="f['email'].errors['pattern']">It is Invalid E-mail</div>
                             </div>
                         </div>
                     </div>
