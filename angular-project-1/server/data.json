@@ -1,0 +1,32 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "name": "hari",
+            "age": "23 years",
+            "email": "doradla.hari@gmail.com",
+            "pic": "user.png"
+        },
+        {
+            "id": 2,
+            "name": "sathish",
+            "age": "30 years",
+            "email": "sathish@gmail.com",
+            "pic": "man1.png"
+        },
+        {
+            "id": 3,
+            "name": "sharmila",
+            "age": "27 years",
+            "email": "sharmila@gmail.com",
+            "pic": "woman.jpg"
+        },
+        {
+            "id": 4,
+            "name": "saanvika",
+            "age": "01 year",
+            "email": "saanvika@gmail.com",
+            "pic": "kid.png"
+        }
+    ]
+}

@@ -19,7 +19,6 @@ import { CrudComponent } from './crud/crud.component';
 import { ContactManagerComponent } from './contact-manager/contact-manager.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { ViewContactComponent } from './view-contact/view-contact.component';
-
 PlotlyModule.plotlyjs = PlotlyJS;
 @NgModule({
   declarations: [

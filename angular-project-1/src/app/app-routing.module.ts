@@ -24,8 +24,8 @@ const routes: Routes = [
   {path:'graphs',component:PlotlyGraphsComponent},
   {path:'crud',component:CrudComponent},
   {path:'contact-manager',component:ContactManagerComponent},
-  {path:'edit-contact',component:EditContactComponent},
-  {path:'view-contact',component:ViewContactComponent}
+  {path:'edit-contact/:contactId',component:EditContactComponent},
+  {path:'view-contact/:contactId',component:ViewContactComponent}
 ];
 
 @NgModule({
