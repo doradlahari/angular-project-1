@@ -79,7 +79,6 @@
                             <label for="city"> Select Your City <span>*</span> </label>
                             <select class="form-control" formControlName="city" id="city"
                                 [ngClass]="{ 'is-invalid': submitted && f['city'].errors }" aria-describedby="city">
-                                <option>select city</option>
                                 <option>Hyderabad</option>
                                 <option>Vijayawada</option>
                                 <option>Machilipatnam</option>
@@ -96,13 +95,13 @@
                     <div class="mb-2">
                         <div class="form-group">
                             <label for="gender"> Select Your Gender <span>*</span> </label>
-                            <input type="radio" formControlName="gender" id="gender"
-                                [ngClass]="{ 'is-invalid': submitted && f['gender'].errors }" aria-describedby="gender">
-                            Male
-                            <input type="radio">
-                            Female
-                            <div *ngIf="submitted && f['gender'].errors" class="invalid-feedback">
-                                <div *ngIf="f['gender'].errors['required']">Gender option should not be empty</div>
+                            <input type="radio" formControlName="gender"
+                                [ngClass]="{ 'is-invalid': submitted && f['gender'].errors }" value="male" />Male
+                            <input type="radio" formControlName="gender"
+                                [ngClass]="{ 'is-invalid': submitted && f['gender'].errors }" value="female" />Female
+                            <div *ngIf="submitted && f['gender'].errors">
+                                <div *ngIf="f['gender'].errors['required']" class="text-danger">Select your gender..!
+                                </div>
                             </div>
                         </div>
                     </div>
