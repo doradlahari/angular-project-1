@@ -1,32 +1,64 @@
 {
-    "contacts": [
-        {
-            "id": 1,
-            "name": "hari",
-            "age": "23 years",
-            "email": "doradla.hari@gmail.com",
-            "pic": "user.png"
-        },
-        {
-            "id": 2,
-            "name": "sathish",
-            "age": "30 years",
-            "email": "sathish@gmail.com",
-            "pic": "man1.png"
-        },
-        {
-            "id": 3,
-            "name": "sharmila",
-            "age": "27 years",
-            "email": "sharmila@gmail.com",
-            "pic": "woman.jpg"
-        },
-        {
-            "id": 4,
-            "name": "saanvika",
-            "age": "01 year",
-            "email": "saanvika@gmail.com",
-            "pic": "kid.png"
-        }
-    ]
+  "contacts": [
+    {
+      "id": 1,
+      "name": "hari",
+      "email": "doradla.hari@gmail.com",
+      "phone": "9848507255",
+      "company": "people tech group",
+      "picture": "assets/user.png",
+      "role": "Intern"
+    },
+    {
+      "id": 2,
+      "name": "swathi",
+      "email": "swathi@gmail.com",
+      "phone": "852852850",
+      "company": "Capegemini",
+      "role": "VLSI Engineer",
+      "picture": "assets/user.png"
+    },
+    {
+      "id": 3,
+      "name": "Tarun",
+      "email": "tarun@gmail.com",
+      "phone": "7897897890",
+      "company": "Qualcomm",
+      "picture": "assets/user.png",
+      "role": "Team Lead"
+    },
+    {
+      "id": 4,
+      "name": "Rohith",
+      "email": "rohith@gmail.com",
+      "phone": "7537537537",
+      "company": "Texas Instruments",
+      "picture": "assets/user.png",
+      "role": "VLSI Engineer"
+    },
+    {
+      "id": 5,
+      "name": "Sathish",
+      "email": "sathish@gmail.com",
+      "phone": "9519519519",
+      "company": "MAAC Animations",
+      "picture": "assets/user.png",
+      "role": "CEO"
+    },
+    {
+      "id": 6,
+      "name": "Sharmila",
+      "email": "sharmila@gmail.com",
+      "phone": "8462846284",
+      "company": "Tech Mahindra",
+      "picture": "assets/user.png",
+      "role": "Team Lead"
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    }
+  ]
 }

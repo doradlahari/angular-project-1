@@ -54,35 +54,36 @@
 </nav>
 
 <!-- crud operation starts -->
-<div class="row m-5 p-3">
-    <div class="col-xl-12 col-lg-12 col-md-8 col-sm-12 col-12 mb-3 bg-light shadow rounded border border-success p-3">
-        <h1 class="text-center"> CRUD Operations </h1>
-        <hr />
-        <p class="text-center">What is the purpose of CRUD Operations?</p>
-        <p class="h6 bg-light"><span class="h1 fw-bolder">.</span> CRUD is an acronym that comes from the world of
-            computer programming and refers to the four functions that are considered necessary to implement a
-            persistent storage application: create, read, update and delete.
-        </p>
+<div class="container">
+    <div class="row m-5 p-3">
+        <div
+            class="col-xl-12 col-lg-12 col-md-8 col-sm-12 col-12 mb-3 bg-light shadow rounded border border-success p-3">
+            <h1 class="text-center"> CRUD Operations </h1>
+            <hr />
+            <p class="text-center">What is the purpose of CRUD Operations?</p>
+            <p class="h6 bg-light"><span class="h1 fw-bolder">.</span> CRUD is an acronym that comes from the world of
+                computer programming and refers to the four functions that are considered necessary to implement a
+                persistent storage application: create, read, update and delete.
+            </p>
+        </div>
     </div>
-</div>
-<hr />
+    <hr />
 
-<!-- add user details -->
+    <!-- add user details -->
 
-<div class="row m-5 p-3">
-    <div
-        class="col-xl-12 text-center col-lg-12 col-md-8 col-sm-12 col-12 mb-3 bg-light shadow rounded border border-info p-3">
-        <h4 class="text-center"> Add New User Here </h4>
-        <input type="text" class="form-control mb-2" placeholder=" Enter Name"> <br />
-        <input type="number" class="form-control mb-2" placeholder="Enter Age"> <br />
-        <input type="email" class="form-control mb-2" placeholder="Enter E-mail"> <br />
-        <input type="number" class="form-control mb-2" placeholder="Enter Number"> <br />
-        <input type="text" class="form-control mb-2" placeholder="Enter Company Name"> <br />
-        <input type="text" class="form-control mb-2" placeholder="Enter Title"> <br />
-        <select class="form-control mb-2">
-            <option></option>
-        </select><br/>
-        <input type="file" class="form-control mb-2"> <br />
-        <button class="btn btn-primary" routerLink="/contact-manager"> Add User </button>
+    <div class="row m-5 p-3">
+        <div
+            class="col-xl-12 text-center col-lg-12 col-md-8 col-sm-12 col-12 mb-3 bg-light shadow rounded border border-info p-3">
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                <h4 class="text-center"> Add New User Here </h4>
+                <input type="text" class="form-control mb-2" placeholder=" Enter Name" formControlName="name"> <br />
+                <input type="email" class="form-control mb-2" placeholder="Enter E-mail" formControlName="email"> <br />
+                <input type="number" class="form-control mb-2" placeholder="Enter Number" formControlName="number"> <br />
+                <input type="text" class="form-control mb-2" placeholder="Enter Company Name" formControlName="organaization"> <br />
+                <input type="text" class="form-control mb-2" placeholder="Enter Role" formControlName="role"> <br />
+                <input type="file" class="form-control mb-2" [src]="contact.picture" formControlName="pic"> <br />
+                <button class="btn btn-primary"> Add User </button>
+            </form>
+        </div>
     </div>
 </div>
