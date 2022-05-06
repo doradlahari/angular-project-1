@@ -9,23 +9,32 @@ import { ContactService } from '../services-contact/contact.service';
   styleUrls: ['./view-contact.component.sass']
 })
 export class ViewContactComponent implements OnInit {
-
-  public contactId: string | null = null;
-  public contact: icontact = {} as icontact;
-  constructor(private activatedRoute: ActivatedRoute,
-    private contactService: ContactService) { }
+  contacts: any = {};
+  // contacts = new Array<icontact>();
+  id!: number;
+  constructor(private contactService: ContactService, private activateroute: ActivatedRoute) {
+    // contactService.getContact(this.id).subscribe((data: icontact[]) => {
+    //   this.contacts = data.map((contact => {
+    //     return new icontact(
+    //       contact.id,
+    //       contact.name,
+    //       contact.email,
+    //       contact.mobile,
+    //       contact.picture,
+    //       contact.company,
+    //       contact.title,
+    //       contact.role
+    //     )
+    //   }))
+    // })
+  }
 
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe((param) => {
-      this.contactId = param.get('contactId')
-    });
-    if (this.contactId) {
-      this.contactService.getContact(this.contactId).subscribe((data: icontact) => {
-        this.contact = data;
-      })
-    }
+    this.id = this.activateroute.snapshot.params['contactId'];    
+    this.contactService.getContact(this.id).subscribe((data: any) => {
+      // console.log("============sada", data);
+      
+      this.contacts = data;
+    })
   }
-public isNotEmpty(){
-  return Object.keys(this.contact).length>0;
-}
 }

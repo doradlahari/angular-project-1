@@ -1,4 +1,4 @@
-import { ThisReceiver } from '@angular/compiler';
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,9 +11,10 @@ import { ContactService } from '../services-contact/contact.service';
   styleUrls: ['./crud.component.sass']
 })
 export class CrudComponent implements OnInit {
-public contact:icontact={} as icontact;
+  users = new Array< icontact>();
 
   profileForm!: FormGroup;
+  
   constructor(private contactService : ContactService, private fb:FormBuilder,
     private router : Router) { }
 
@@ -21,10 +22,10 @@ public contact:icontact={} as icontact;
 this.profileForm= this.fb.group({
   name:[],
   email:[],
-  number:[],
-  organaization:[],
+  mobile:[],
+  company:[],
   role:[],
-  pic:[]
+  picture:[]
 })
 
 
@@ -35,8 +36,10 @@ return;
     }
 
     if(this.profileForm.valid){
-      this.contactService.createContact(this.contact).subscribe((data:icontact)=>{
-this.router.navigate(['/contact-manager']).then();
+      this.contactService.createContact(this.profileForm.value).subscribe((data:icontact)=>{
+console.log("created",data);
+this.users.push(data);
+this.router.navigate(['contact-manager'])
       })
   }
   }

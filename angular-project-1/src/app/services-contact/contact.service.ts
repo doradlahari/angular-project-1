@@ -1,6 +1,6 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, Observable, throwError } from 'rxjs';
+import { map,Observable} from 'rxjs';
 import { icontact } from '../models/icontact';
 
 @Injectable({
@@ -8,23 +8,23 @@ import { icontact } from '../models/icontact';
 })
 export class ContactService {
 
-  private serverUrl: string = `http://localhost:9000`;
+  private serverUrl: string = "http://localhost:3000/contacts";
   
   constructor(private httpClient: HttpClient) {
   }
 
 
   // GET All Contacts
-  public GetallContacts(): Observable<icontact[]> {
-    let dataUrl: string = `${this.serverUrl}/contacts`;
-    return this.httpClient.get<icontact[]>(dataUrl).pipe(catchError(this.handleError));
+   GetallContacts():Observable<icontact[]> {
+ return this.httpClient.get<icontact[]>(`${this.serverUrl}`)
   }
 
 
   // GET Single Contact
-  public getContact(contactId: string): Observable<icontact> {
-    let dataUrl: string = `${this.serverUrl}/contacts/${contactId}`;
-    return this.httpClient.get<icontact>(dataUrl).pipe(catchError(this.handleError));
+  getContact(id:number){
+    
+    return this.httpClient.get<icontact[]>(`${this.serverUrl}/${id}`).pipe(
+      map((res: any) => { return res; }));
   }
 
 
@@ -35,41 +35,22 @@ export class ContactService {
   // }
 
   createContact(data: any) {
-    let dataUrl: string = `${this.serverUrl}/contacts`;
-    return this.httpClient.post<icontact[]>(dataUrl, data).pipe(
-  
+    return this.httpClient.post<icontact[]>(this.serverUrl,data).pipe(
       map((res: any) => { return res; }))
-  
-  
-  
   }
 
 
   // update contact
-  public updateContact(contact: icontact, contactId: string): Observable<icontact> {
-    let dataUrl: string = `${this.serverUrl}/contacts/${contactId}`;
-    return this.httpClient.put<icontact>(dataUrl, contact).pipe(catchError(this.handleError));
+  updateContact(id: number,data: any) {
+   
+    return this.httpClient.put<icontact[]>(`${this.serverUrl}/${id}`, data).pipe(
+      map((res: any) => { return res; }))
   }
 
 
   // delete contact
-  public deleteContact(contactId: string): Observable<{}> {
-    let dataUrl: string = `${this.serverUrl}/contacts/${contactId}`;
-    return this.httpClient.delete<{}>(dataUrl).pipe(catchError(this.handleError));
-  }
-
-
-  // Error Handling
-  public handleError(error: HttpErrorResponse) {
-    let errorMessage: string = ``;
-    if (error.error instanceof ErrorEvent) {
-      // client error
-      errorMessage = `Error : ${error.error.message}`
+  deleteContact(id: number){
+    return this.httpClient.delete<icontact[]>(`${this.serverUrl}/${id}`).pipe(
+      map((res: any) => { return res; }))
     }
-    else {
-      // server error
-      errorMessage = `status : ${error.status}\n Message : ${errorMessage}`;
-    }
-    return throwError(errorMessage);
-  }
 }

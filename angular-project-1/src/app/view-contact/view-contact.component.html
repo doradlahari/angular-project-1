@@ -1,24 +1,24 @@
 <!-- display contacts list in card format -->
-<div class="container" *ngIf="isNotEmpty">
+<!-- <div class="container " *ngFor="let contact of contacts"> -->
+<div class="container ">
     <div class="row m-5 p-3">
-
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 text-center">
+        <div  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 text-center">
             <div class="card list-group-item-info shadow">
-                <div class="card-body">
-                    <div class="row">
+                <div class="card-body" >
+                    <div class="row" >
                         <h2 class="text-center mb-3"> View Contact Here </h2>
                         <!-- image here -->
                         <div class="col-sm-4">
-                            <img [src]="contact.picture" style="width: 300px; height: 300px;" class="img-icon">
+                            <img [src]="contacts.picture" style="width: 300px; height: 300px;" class="img-icon">
                         </div>
                         <!-- details here -->
                         <div class="col-sm-8 py-5">
                             <ul class="list-group py-5">
-                                <li class="list-group-item"> Name: <span class="fw-bolder"> {{contact.name}} </span> </li>
-                                <li class="list-group-item"> E-mail: <span class="fw-bolder"> {{contact.email}} </span></li>
-                                <li class="list-group-item"> Mobile: <span class="fw-bolder"> {{contact.phone}} </span> </li>
-                                <li class="list-group-item"> Company: <span class="fw-bolder"> {{contact.company}} </span> </li>
-                                <li class="list-group-item"> Title: <span class="fw-bolder"> {{contact.role}} </span> </li>
+                                <li class="list-group-item"> Name: <span class="fw-bolder"> {{contacts.name}} </span> </li>
+                                <li class="list-group-item"> E-mail: <span class="fw-bolder"> {{contacts.email}} </span></li>
+                                <li class="list-group-item"> Mobile: <span class="fw-bolder"> {{contacts.mobile}} </span> </li>
+                                <li class="list-group-item"> Company: <span class="fw-bolder"> {{contacts.company}} </span> </li>
+                                <li class="list-group-item"> Title: <span class="fw-bolder"> {{contacts.role}} </span> </li>
                             </ul>
                         </div>
                         <div class="row">

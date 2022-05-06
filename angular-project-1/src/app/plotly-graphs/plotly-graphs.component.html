@@ -61,27 +61,30 @@
     <!------ card starts ------->
     <div class="row m-5 p-3">
         <!------ card-1 starts ------->
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mb-3">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
             <div class="card">
                 <div class="card-head">
                     <p class="text-center"> A Fancy Graph </p>
                 </div>
                 <div class="card-body">
-                    <plotly-plot [data]="Fancy.data" [layout]="Fancy.layout"></plotly-plot>
+                    <plotly-plot [data]="Fancy.data" [layout]="Fancy.layout"
+                    [style]="{width: '100%', height: '100%'}">
+                        
+                    </plotly-plot>
                 </div>
             </div>
         </div>
 
         <!------ card-2 starts ------->
 
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mb-3">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
             <div class="card">
                 <div class="card-head">
                     <p class="text-center"> Graph -2 </p>
                 </div>
                 <div class="card-body">
                     <plotly-plot [data]="Barchart.data" [layout]="Barchart.layout" [useResizeHandler]="true"
-                        [style]="{position:'relative',width: '100%', height: '100%'}">
+                        [style]="{width: '100%', height: '100%'}">
                     </plotly-plot>
 
                 </div>
@@ -90,14 +93,76 @@
 
         <!------ card-3 starts ------->
 
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mb-3">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
             <div class="card">
                 <div class="card-head">
                     <p class="text-center"> Graph -3 </p>
                 </div>
                 <div class="card-body">
-                    <plotly-plot [data]="LineChart.data" [layout]="LineChart.layout" [useResizeHandler]="true"
-                        [style]="{position:'relative',width: '100%', height: '100%'}">
+                    <plotly-plot [data]="LineChart.data" [layout]="LineChart.layout" [config]="LineChart.config"  [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+
+
+         <!------ card-4 starts ------->
+
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -4 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]="PieChart.data" [layout]="PieChart.layout" [config]="PieChart.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+
+         <!------ card-5 starts ------->
+
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -5 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]="WaterFallcharts.data" [layout]="WaterFallcharts.layout" [config]="WaterFallcharts.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+
+         <!------ card-6 starts ------->
+
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -6 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]="InsetGraph.data" [layout]="InsetGraph.layout" [config]="InsetGraph.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+
+
+        <!------ card-7 starts ------->
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -7 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" BasicFunnelPlot.data" [layout]=" BasicFunnelPlot.layout" [config]=" BasicFunnelPlot.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
                     </plotly-plot>
                 </div>
             </div>

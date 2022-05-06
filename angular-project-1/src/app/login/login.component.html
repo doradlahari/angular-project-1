@@ -17,6 +17,7 @@
                                 aria-describedby="FirstName">
                             <div *ngIf="submitted && f['FirstName'].errors" class="invalid-feedback">
                                 <div *ngIf="f['FirstName'].errors['required']">Name is required</div>
+                                <div *ngIf="f['FirstName'].errors['minlength']">Name should be atleast 4char..!</div>
                             </div>
                         </div>
                     </div>

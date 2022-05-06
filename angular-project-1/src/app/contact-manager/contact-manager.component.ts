@@ -8,21 +8,43 @@ import { ContactService } from '../services-contact/contact.service';
   styleUrls: ['./contact-manager.component.sass']
 })
 export class ContactManagerComponent implements OnInit {
-  public loading: boolean = false;
-  public contacts: icontact[] = [];
-  public errorMessage: string | null = null;
+  [x: string]: any;
+  contacts = new Array<icontact>();
   constructor(private contactService: ContactService) {
-  }
-
-  ngOnInit(): void {
-    this.loading = true;
-    this.contactService.GetallContacts().subscribe((data: icontact[]) => {
-      this.contacts = data;
-      this.loading = false;
-    }, (error) => {
-      this.errorMessage = error;
-      this.loading = false;
+    contactService.GetallContacts().subscribe((data: icontact[]) => {
+      this.contacts = data.map((contact => {
+        return new icontact(
+          contact.id,
+          contact.name,
+          contact.email,
+          contact.mobile,
+          contact.picture,
+          contact.company,
+          contact.title,
+          contact.role
+        )
+      }))
     })
   }
 
+  ngOnInit(): void {
+   this.GetallContacts();
+  }
+
+  GetallContacts(){
+    this.contactService.GetallContacts().subscribe((data: icontact[]) => {
+      this.contacts = data;
+    })
+  }
+  delcontact(id: number) {
+    alert("are you sure you want to delete?")
+    this.contactService.deleteContact(id).subscribe((data: any) => {
+      this.GetallContacts();
+    })
+  }
+  refresh() {
+    return true;
+    }
+
 }
+

@@ -1,6 +1,13 @@
 <!-- display contacts list in card format -->
-<div class="container" *ngIf="!loading && contacts.length>0">
+<div class="container">
     <div class="row m-5 p-3">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a routerLink="/crud" class="btn btn-primary m-2">
+                    <i class="fa fa-user-plus"></i>
+                </a>
+            </div>
+        </div>
         <div *ngFor="let contact of contacts" class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-3 mb-3">
             <div class="card list-group-item-info shadow">
                 <div class="card-body">
@@ -17,7 +24,7 @@
                             <ul class="list-group">
                                 <li class="list-group-item"> Name: <span class="fw-bolder"> {{contact.name}} </span> </li>
                                 <li class="list-group-item"> E-mail: <span class="fw-bolder"> {{contact.email}} </span></li>
-                                <li class="list-group-item"> Mobile: <span class="fw-bolder"> {{contact.phone}} </span> </li>
+                                <li class="list-group-item"> Mobile: <span class="fw-bolder"> {{contact.mobile}} </span> </li>
                                 <li class="list-group-item"> Company: <span class="fw-bolder"> {{contact.company}} </span> </li>
                                 <li class="list-group-item"> Role: <span class="fw-bolder"> {{contact.role}} </span> </li>
                             </ul>
@@ -31,10 +38,10 @@
                             <a routerLink="/view-contact/{{contact.id}}" class="btn btn-warning m-2">
                                 <i class="fa fa-eye"></i>
                             </a>
-                            <a routerLink="/edit-contact/:contactId" class="btn btn-primary m-2">
+                            <a routerLink="/edit-contact/{{contact.id}}" class="btn btn-primary m-2">
                                 <i class="fa fa-pen"></i>
                             </a>
-                            <button class="btn btn-danger m-2">
+                            <button class="btn btn-danger m-2" (click)="delcontact(contact.id)">
                                 <i class="fa fa-trash"></i>
                             </button>
 
