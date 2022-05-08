@@ -67,15 +67,44 @@
                     <p class="text-center"> A Fancy Graph </p>
                 </div>
                 <div class="card-body">
-                    <plotly-plot [data]="Fancy.data" [layout]="Fancy.layout"
-                    [style]="{width: '100%', height: '100%'}">
-                        
+                    <plotly-plot [data]="Fancy.data" [layout]="Fancy.layout" [style]="{width: '55%', height: '55%'}">
                     </plotly-plot>
                 </div>
             </div>
         </div>
 
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a fancy Graph which does not having any configurations
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
         <!------ card-2 starts ------->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Bar Plot Graph which does having zooming configurations.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2  text-primary"> Right click on
+                            mouse drag & down then <br /> the configuartion makes zooming </span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
             <div class="card">
@@ -86,11 +115,10 @@
                     <plotly-plot [data]="Barchart.data" [layout]="Barchart.layout" [useResizeHandler]="true"
                         [style]="{width: '100%', height: '100%'}">
                     </plotly-plot>
-
                 </div>
             </div>
         </div>
-
+        <hr />
         <!------ card-3 starts ------->
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
@@ -99,69 +127,459 @@
                     <p class="text-center"> Graph -3 </p>
                 </div>
                 <div class="card-body">
-                    <plotly-plot [data]="LineChart.data" [layout]="LineChart.layout" [config]="LineChart.config"  [useResizeHandler]="true"
-                        [style]="{width: '100%', height: '100%'}">
+                    <plotly-plot [data]="LineChart.data" [layout]="LineChart.layout" [config]="LineChart.config"
+                        [useResizeHandler]="true" [style]="{width: '100%', height: '100%'}">
                     </plotly-plot>
                 </div>
             </div>
         </div>
 
-
-         <!------ card-4 starts ------->
-
-         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Sactter Plot Graph which does having zooming configurations.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> zooming with scrolling with
+                            mouse <br /> the configuartion makes zooming </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!------ card-4 starts ------->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Pie Chart Graph which does having Editing configurations.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> click on the title showing
+                            on the graph to edit & <br /> the configuartion makes title editing </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
             <div class="card">
                 <div class="card-head">
                     <p class="text-center"> Graph -4 </p>
                 </div>
                 <div class="card-body">
-                    <plotly-plot [data]="PieChart.data" [layout]="PieChart.layout" [config]="PieChart.config" [useResizeHandler]="true"
-                        [style]="{width: '100%', height: '100%'}">
+                    <plotly-plot [data]="PieChart.data" [layout]="PieChart.layout" [config]="PieChart.config"
+                        [useResizeHandler]="true" [style]="{width: '100%', height: '100%'}">
                     </plotly-plot>
                 </div>
             </div>
         </div>
+        <hr />
 
-         <!------ card-5 starts ------->
+        <!------ card-5 starts ------->
 
-         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
             <div class="card">
                 <div class="card-head">
                     <p class="text-center"> Graph -5 </p>
                 </div>
                 <div class="card-body">
-                    <plotly-plot [data]="WaterFallcharts.data" [layout]="WaterFallcharts.layout" [config]="WaterFallcharts.config" [useResizeHandler]="true"
+                    <plotly-plot [data]="WaterFallcharts.data" [layout]="WaterFallcharts.layout"
+                        [config]="WaterFallcharts.config" [useResizeHandler]="true"
                         [style]="{width: '100%', height: '100%'}">
                     </plotly-plot>
                 </div>
             </div>
         </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Water Fall Charts Graph which does having Static configurations.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> the configuartion showing the graph
+                            is static </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!------ card-6 starts ------->
 
-         <!------ card-6 starts ------->
-
-         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
             <div class="card">
                 <div class="card-head">
                     <p class="text-center"> Graph -6 </p>
                 </div>
                 <div class="card-body">
-                    <plotly-plot [data]="InsetGraph.data" [layout]="InsetGraph.layout" [config]="InsetGraph.config" [useResizeHandler]="true"
-                        [style]="{width: '100%', height: '100%'}">
+                    <plotly-plot [data]="InsetGraph.data" [layout]="InsetGraph.layout" [config]="InsetGraph.config"
+                        [useResizeHandler]="true" [style]="{width: '100%', height: '100%'}">
                     </plotly-plot>
                 </div>
             </div>
         </div>
-
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        this have to be done
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!------ card-7 starts ------->
-
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Basic Funnel Plot which does having Static configurations.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> Force The Modebar to Always Be Visible</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
             <div class="card">
                 <div class="card-head">
                     <p class="text-center"> Graph -7 </p>
                 </div>
                 <div class="card-body">
-                    <plotly-plot [data]=" BasicFunnelPlot.data" [layout]=" BasicFunnelPlot.layout" [config]=" BasicFunnelPlot.config" [useResizeHandler]="true"
+                    <plotly-plot [data]=" BasicFunnelPlot.data" [layout]=" BasicFunnelPlot.layout"
+                        [config]=" BasicFunnelPlot.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- graph 8 starts -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -8 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" Heatmap.data" [layout]=" Heatmap.layout" [config]="Heatmap.config"
+                        [useResizeHandler]="true" [style]="{width: '50%', height: '50%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Heatmap Plot won't display Mode Bar configurations.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> won't display Mode Bar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- graph-9 -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Basic Symmetric Error Bars Remove ModeBar Buttons configurations.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> Remove ModeBar Buttons</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -9 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" BasicSymmetricErrorBars.data" [layout]=" BasicSymmetricErrorBars.layout"
+                        [config]="BasicSymmetricErrorBars.config" [useResizeHandler]="true"
+                        [style]="{width: '50%', height: '50%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- Graph -9 -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -10 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" Indicators.data" [layout]=" Indicators.layout" [config]="Indicators.config"
+                        [useResizeHandler]="true" [style]="{width: '50%', height: '50%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        this should be done
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- Display the EditChart Link -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Basic Display Edit Chart Link is the configuration.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> DisplayEditChartLink</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -10 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" DisplayEditChartLink.data" [layout]=" DisplayEditChartLink.layout"
+                        [config]="DisplayEditChartLink.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- Customize The EditChart Link Text -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -11 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" CustomizeTheEditChartLink.data" [layout]=" CustomizeTheEditChartLink.layout"
+                        [config]="CustomizeTheEditChartLink.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Customize The EditChart Link Text is the configuration.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> Customize The EditChart Link Text</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- Display Edit in Chart Studio Modebar Button -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Display Edit in Chart Studio Modebar Button is the configuration.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> Display Edit in Chart Studio Modebar Button</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -12 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" DisplayEditChartStudioModebarButton.data"
+                        [layout]=" DisplayEditChartStudioModebarButton.layout"
+                        [config]="DisplayEditChartStudioModebarButton.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <!-- Change the Default Locale -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -12 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" ChangeDefaultLocale.data"
+                        [layout]=" ChangeDefaultLocale.layout"
+                        [config]="ChangeDefaultLocale.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Change the Default Locale is the configuration.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> Change the Default Locale</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <!-- Hide the Plotly Logo on the Modebar -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Hide the Plotly Logo on the Modebar is the configuration.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> Hide the Plotly Logo on the Modebar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -13 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" HidePlotlyLogoOnModebar.data"
+                        [layout]=" HidePlotlyLogoOnModebar.layout"
+                        [config]="HidePlotlyLogoOnModebar.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <!-- Making a Responsive Chart -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -13 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" MakingResponsiveChart.data"
+                        [layout]=" MakingResponsiveChart.layout"
+                        [config]="MakingResponsiveChart.config" [useResizeHandler]="true"
+                        [style]="{width: '100%', height: '100%'}">
+                    </plotly-plot>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Making a Responsive Chart is the configuration.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> Making a Responsive Chart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <!-- Double Click Delay -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center">
+                        Graph Description
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="h4">
+                        -> Its a Making a Responsive Chart is the configuration.<br />
+                        -> Here the configuration is<br /> <span class=" mt-2 text-primary"> The title showing
+                            on the graph is <br /> Making a Responsive Chart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12 mb-3">
+            <div class="card">
+                <div class="card-head">
+                    <p class="text-center"> Graph -13 </p>
+                </div>
+                <div class="card-body">
+                    <plotly-plot [data]=" DoubleClickDelay.data"
+                        [layout]=" DoubleClickDelay.layout"
+                        [config]="DoubleClickDelay.config" [useResizeHandler]="true"
                         [style]="{width: '100%', height: '100%'}">
                     </plotly-plot>
                 </div>
