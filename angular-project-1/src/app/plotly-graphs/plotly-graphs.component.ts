@@ -400,14 +400,16 @@ export class PlotlyGraphsComponent implements OnInit {
     responsive: true
   }  
   }
-  // Double Click Delay
+  // Double Click Delay 
   DoubleClickDelay={
     data:[{
       type: "bar",
       y: [3, 5, 3, 2],
       x: ["2019-09-02", "2019-10-10", "2019-11-12", "2019-12-22"]
     }],
-    layout:{xaxis: {type: 'date'}},
+    layout:{
+      title: 'Double Click Delay!',
+      xaxis: {type: 'date'}},
     config :{doubleClickDelay: 1000}
     
   }
