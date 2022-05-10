@@ -2,13 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map,Observable} from 'rxjs';
 import { icontact } from '../models/icontact';
-
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  private serverUrl: string = "http://localhost:3000/contacts";
+  // private serverUrl: string = "http://localhost:3000/contacts";
+  private serverUrl: string = "https://crudcrud.com/api/f2cad3b4b01d408fb14c82bac500f865/contacts"
   
   constructor(private httpClient: HttpClient) {
   }
@@ -21,9 +21,9 @@ export class ContactService {
 
 
   // GET Single Contact
-  getContact(id:number){
+  getContact(_id:string){
     
-    return this.httpClient.get<icontact[]>(`${this.serverUrl}/${id}`).pipe(
+    return this.httpClient.get<icontact[]>(`${this.serverUrl}/${_id}`).pipe(
       map((res: any) => { return res; }));
   }
 
@@ -41,16 +41,16 @@ export class ContactService {
 
 
   // update contact
-  updateContact(id: number,data: any) {
+  updateContact(_id: string,data: any) {
    
-    return this.httpClient.put<icontact[]>(`${this.serverUrl}/${id}`, data).pipe(
+    return this.httpClient.put<icontact[]>(`${this.serverUrl}/${_id}`, data).pipe(
       map((res: any) => { return res; }))
   }
 
 
   // delete contact
-  deleteContact(id: number){
-    return this.httpClient.delete<icontact[]>(`${this.serverUrl}/${id}`).pipe(
+  deleteContact(_id: string){
+    return this.httpClient.delete<icontact[]>(`${this.serverUrl}/${_id}`).pipe(
       map((res: any) => { return res; }))
     }
 }

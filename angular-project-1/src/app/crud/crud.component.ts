@@ -36,7 +36,15 @@ return;
     }
 
     if(this.profileForm.valid){
-      this.contactService.createContact(this.profileForm.value).subscribe((data:icontact)=>{
+      const model={
+        name:this.profileForm.value.name,
+        email:this.profileForm.value.email,
+        mobile:this.profileForm.value.mobile.toString(),
+        company:this.profileForm.value.company,
+        role:this.profileForm.value.role,
+        picture:this.profileForm.value.picture
+      }
+      this.contactService.createContact(model).subscribe((data:icontact)=>{
 console.log("created",data);
 this.users.push(data);
 this.router.navigate(['contact-manager'])

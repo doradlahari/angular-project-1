@@ -12,7 +12,7 @@ import { ContactService } from '../services-contact/contact.service';
 export class EditContactComponent implements OnInit {
 
   profileForm!: FormGroup;
-  id!: number;
+  _id!: string;
   contactService: any;
   // contacts = new Array<icontact>();
   contacts: any = {};
@@ -29,8 +29,8 @@ export class EditContactComponent implements OnInit {
       role: [],
       picture: []
     })
-    this.id = this.activateroute.snapshot.params['contactId'];
-    this.commonserv.getContact(this.id).subscribe((data) => {
+    this._id = this.activateroute.snapshot.params['contactId'];
+    this.commonserv.getContact(this._id).subscribe((data) => {
       this.contacts = data
       // this.profileForm.setValue(data);
     }
@@ -43,7 +43,7 @@ export class EditContactComponent implements OnInit {
     }
 
     if (this.profileForm.valid) {
-      this.commonserv.updateContact(this.id, this.profileForm.value).subscribe((data: icontact) => {
+      this.commonserv.updateContact(this._id, this.profileForm.value).subscribe((data: icontact) => {
         console.log("created", data);
         this.router.navigate(['contact-manager'])
       })

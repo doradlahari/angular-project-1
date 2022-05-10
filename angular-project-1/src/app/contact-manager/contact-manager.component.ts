@@ -14,13 +14,12 @@ export class ContactManagerComponent implements OnInit {
     contactService.GetallContacts().subscribe((data: icontact[]) => {
       this.contacts = data.map((contact => {
         return new icontact(
-          contact.id,
+          contact._id,
           contact.name,
           contact.email,
           contact.mobile,
           contact.picture,
           contact.company,
-          contact.title,
           contact.role
         )
       }))
@@ -36,9 +35,9 @@ export class ContactManagerComponent implements OnInit {
       this.contacts = data;
     })
   }
-  delcontact(id: number) {
+  delcontact(_id: string) {
     alert("are you sure you want to delete?")
-    this.contactService.deleteContact(id).subscribe((data: any) => {
+    this.contactService.deleteContact(_id).subscribe((data: any) => {
       this.GetallContacts();
     })
   }

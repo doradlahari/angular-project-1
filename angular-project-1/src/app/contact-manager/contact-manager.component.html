@@ -35,13 +35,13 @@
                             <a routerLink="/crud" class="btn btn-primary m-2">
                                 <i class="fa fa-user-plus"></i>
                             </a>
-                            <a routerLink="/view-contact/{{contact.id}}" class="btn btn-warning m-2">
+                            <a routerLink="/view-contact/{{contact._id}}" class="btn btn-warning m-2">
                                 <i class="fa fa-eye"></i>
                             </a>
-                            <a routerLink="/edit-contact/{{contact.id}}" class="btn btn-primary m-2">
+                            <a routerLink="/edit-contact/{{contact._id}}" class="btn btn-primary m-2">
                                 <i class="fa fa-pen"></i>
                             </a>
-                            <button class="btn btn-danger m-2" (click)="delcontact(contact.id)">
+                            <button class="btn btn-danger m-2" (click)="delcontact(contact._id)">
                                 <i class="fa fa-trash"></i>
                             </button>
 

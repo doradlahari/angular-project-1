@@ -8,6 +8,8 @@ import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MarketingComponent } from './marketing/marketing.component';
+import { OnInItLifeHookComponent } from './on-in-it-life-hook/on-in-it-life-hook.component';
+import { OnchangeLifeHookComponent } from './onchange-life-hook/onchange-life-hook.component';
 import { PlotlyGraphsComponent } from './plotly-graphs/plotly-graphs.component';
 import { ServicesComponent } from './services/services.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -25,7 +27,9 @@ const routes: Routes = [
   {path:'crud',component:CrudComponent},
   {path:'contact-manager',component:ContactManagerComponent},
   {path:'edit-contact/:contactId',component:EditContactComponent},
-  {path:'view-contact/:contactId',component:ViewContactComponent}
+  {path:'view-contact/:contactId',component:ViewContactComponent},
+  {path:'onchange',component:OnchangeLifeHookComponent},
+  {path:'onit',component:OnInItLifeHookComponent}
 ];
 
 @NgModule({

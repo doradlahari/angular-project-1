@@ -19,7 +19,9 @@ import { CrudComponent } from './crud/crud.component';
 import { ContactManagerComponent } from './contact-manager/contact-manager.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { ViewContactComponent } from './view-contact/view-contact.component';
-import {HttpClientModule} from "@angular/common/http"
+import {HttpClientModule} from "@angular/common/http";
+import { OnchangeLifeHookComponent } from './onchange-life-hook/onchange-life-hook.component';
+import { OnInItLifeHookComponent } from './on-in-it-life-hook/on-in-it-life-hook.component'
 PlotlyModule.plotlyjs = PlotlyJS;
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ PlotlyModule.plotlyjs = PlotlyJS;
     ContactManagerComponent,
     EditContactComponent,
     ViewContactComponent,
+    OnchangeLifeHookComponent,
+    OnInItLifeHookComponent,
  
   ],
   imports: [
