@@ -15,15 +15,14 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fa fa-tools"></i> Our Services </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" routerLink="/contact-manager">Contact-Manager</a></li>
-                        <li><a class="dropdown-item" routerLink="/software-marketing">Content Writing</a></li>
-                        <li><a class="dropdown-item" routerLink="/consultancy">Software Testing</a></li>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
+                        class="fa fa-tools"></i> Our Services </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" routerLink="/services">Software Marketing</a></li>
+                      <li><a class="dropdown-item" routerLink="/software-marketing">Content Writing</a></li>
+                      <li><a class="dropdown-item" routerLink="/consultancy">Software Testing</a></li>
                     </ul>
-                </li>
+                  </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/contact-us">
                         <i class="fa fa-map-marker"></i> Contact Us
@@ -47,10 +46,16 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <i class="fa fa-building"></i> Life Cycle Hooks </a>
+                        <i class="fa fa-clock"></i> Life Cycle Hooks </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" routerLink="/onit">ngOnIt</a></li>
                         <li><a class="dropdown-item" routerLink="/onchange">Onchange</a></li>
+                        <li><a class="dropdown-item" routerLink="/ngDoCheck">ngDoCheck</a></li>
+                        <li><a class="dropdown-item" routerLink="/ngAfterContentInit">ngAfterContentInit</a></li>
+                        <li><a class="dropdown-item" routerLink="/ngAfterContentChecked">ngAfterContentChecked</a></li>
+                        <li><a class="dropdown-item" routerLink="/ngAfterViewInit">ngAfterViewInit</a></li>
+                        <li><a class="dropdown-item" routerLink="/ngAfterViewChecked">ngAfterViewChecked</a></li>
+                        <li><a class="dropdown-item" routerLink="/ngOnDestroy">ngOnDestroy</a></li>
                     </ul>
                 </li>
             </ul>
@@ -61,3 +66,10 @@
         </div>
     </div>
 </nav>
+<!----------life cycle hooks started------------>
+    <div class="row p-5 m-5">
+        <div class="bg-light shadow-lg rounded border border-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+           <h1 class="text-center"> ngOnInit()</h1><br/>
+           <p class="text-center fw-bolder"> Called once the component is Initialized </p>
+        </div>
+    </div>

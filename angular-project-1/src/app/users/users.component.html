@@ -1,0 +1,17 @@
+<div class="container">
+
+    <div class="mt-3">
+    
+        <h3>Users List</h3>
+    
+        <button class="btn btn-primary" (click)="onNameChanged()">Change Name</button>
+    
+        <app-user *ngFor="let user of userlist" [user]="user" [name]="name">
+    
+            <p>Username:{{ user}}</p>
+    
+        </app-user>
+    
+    </div>
+    
+    </div>

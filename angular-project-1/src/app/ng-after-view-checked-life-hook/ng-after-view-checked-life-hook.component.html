@@ -15,15 +15,14 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fa fa-tools"></i> Our Services </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" routerLink="/contact-manager">Contact-Manager</a></li>
-                        <li><a class="dropdown-item" routerLink="/software-marketing">Content Writing</a></li>
-                        <li><a class="dropdown-item" routerLink="/consultancy">Software Testing</a></li>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
+                        class="fa fa-tools"></i> Our Services </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" routerLink="/services">Software Marketing</a></li>
+                      <li><a class="dropdown-item" routerLink="/software-marketing">Content Writing</a></li>
+                      <li><a class="dropdown-item" routerLink="/consultancy">Software Testing</a></li>
                     </ul>
-                </li>
+                  </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/contact-us">
                         <i class="fa fa-map-marker"></i> Contact Us
@@ -34,15 +33,15 @@
                         <i class="fa fa-chart-area"></i> Graphs
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/crud" role="button" data-bs-toggle="dropdown"
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="fa fa-building"></i> CRUD </a>
-                    <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" routerLink="/contact-manager">Contact-Manager</a></li>
                         <li><a class="dropdown-item" routerLink="/view-contact">View Contact List</a></li>
                         <li><a class="dropdown-item" routerLink="/edit-contact">Edit Contact</a></li>
-                    </ul> -->
+                    </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -67,11 +66,10 @@
         </div>
     </div>
 </nav>
-
 <!----------life cycle hooks started------------>
 <div class="row p-5 m-5">
-    <div class="bg-light shadow-lg rounded border border-success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        <h1 class="text-center"> ngOnChange()</h1><br />
-        <p class="text-center fw-bolder"> Called after a boind input property changes.</p>
+    <div class="bg-light shadow-lg rounded border border-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h1 class="text-center"> ngAfterViewChecked()</h1><br />
+        <p class="text-center fw-bolder"> Called every time component(child) view has been checked</p>
     </div>
 </div>

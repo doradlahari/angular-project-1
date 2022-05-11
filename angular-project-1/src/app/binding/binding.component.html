@@ -15,11 +15,10 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fa fa-tools"></i> Our Services </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" routerLink="/contact-manager">Contact-Manager</a></li>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
+                            class="fa fa-tools"></i> Our Services </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/services">Software Marketing</a></li>
                         <li><a class="dropdown-item" routerLink="/software-marketing">Content Writing</a></li>
                         <li><a class="dropdown-item" routerLink="/consultancy">Software Testing</a></li>
                     </ul>
@@ -34,21 +33,21 @@
                         <i class="fa fa-chart-area"></i> Graphs
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/crud" role="button" data-bs-toggle="dropdown"
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="fa fa-building"></i> CRUD </a>
-                    <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" routerLink="/contact-manager">Contact-Manager</a></li>
                         <li><a class="dropdown-item" routerLink="/view-contact">View Contact List</a></li>
                         <li><a class="dropdown-item" routerLink="/edit-contact">Edit Contact</a></li>
-                    </ul> -->
+                    </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                <li class="nav-item">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="fa fa-clock"></i> Life Cycle Hooks </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" routerLink="/onit">ngOnIt</a></li>
                         <li><a class="dropdown-item" routerLink="/onchange">Onchange</a></li>
                         <li><a class="dropdown-item" routerLink="/ngDoCheck">ngDoCheck</a></li>
@@ -57,6 +56,17 @@
                         <li><a class="dropdown-item" routerLink="/ngAfterViewInit">ngAfterViewInit</a></li>
                         <li><a class="dropdown-item" routerLink="/ngAfterViewChecked">ngAfterViewChecked</a></li>
                         <li><a class="dropdown-item" routerLink="/ngOnDestroy">ngOnDestroy</a></li>
+                    </ul> -->
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa fa-clock"></i> Data Binding </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/child">Child Component</a></li>
+                        <li><a class="dropdown-item" routerLink="/parent">Parent Component</a></li>
+                        <li><a class="dropdown-item" routerLink="/user">user</a></li>
+                        <li><a class="dropdown-item" routerLink="/users">users</a></li>
                     </ul>
                 </li>
             </ul>
@@ -67,11 +77,25 @@
         </div>
     </div>
 </nav>
-
-<!----------life cycle hooks started------------>
-<div class="row p-5 m-5">
-    <div class="bg-light shadow-lg rounded border border-success col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        <h1 class="text-center"> ngOnChange()</h1><br />
-        <p class="text-center fw-bolder"> Called after a boind input property changes.</p>
+<!-- binding starts -->
+<div class="container">
+    <div class="row mt-5 text-center">
+        <div class="col-lg-12 mt-5">
+            <p class="fw-bolder">Twoway binding!</p>
+            Enter Your Name:<input type="text" class="form-control" [(ngModel)]="fullname"/><br/>
+            Your Name is:{{fullname}}<br/><br/>
+            
+            
+            <p>Property Binding!</p>
+            <img alt="item" [src]="itemImageUrl" class="h-50 w-50"><br/>
+            <br/>
+            
+            <p>event Binding!</p>
+            
+            <button class="btn btn-primary" (click)="onClick()">click</button>
+            
+            <h5 *ngIf="h1style">event binding works</h5>
+        </div>
     </div>
+
 </div>
