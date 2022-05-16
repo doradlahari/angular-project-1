@@ -8,7 +8,7 @@ import { icontact } from '../models/icontact';
 export class ContactService {
 
   // private serverUrl: string = "http://localhost:3000/contacts";
-  private serverUrl: string = "https://crudcrud.com/api/f2cad3b4b01d408fb14c82bac500f865/contacts"
+  private serverUrl: string = "https://crudcrud.com/api/a08b6545a9d74880a361700549bdc03c/contacts"
   
   constructor(private httpClient: HttpClient) {
   }

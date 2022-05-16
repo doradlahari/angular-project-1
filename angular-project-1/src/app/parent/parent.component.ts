@@ -6,7 +6,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.sass']
 })
 export class ParentComponent implements OnInit,OnDestroy {
-  msging: any;
+  messageTo: any;
   ischild=false;
   name="";
   constructor() {
@@ -43,7 +43,7 @@ this.ischild=!this.ischild;
 
   receiveChildData(data: any){
     console.log(data);
-    this.msging= data;
+    this.messageTo= data;
     }
 
 }
