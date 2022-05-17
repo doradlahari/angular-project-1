@@ -44,8 +44,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-clock"></i> Life Cycle Hooks </a>
                     <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" routerLink="/onit">ngOnIt</a></li>
@@ -82,18 +81,19 @@
     <div class="row mt-5 text-center">
         <div class="col-lg-12 mt-5">
             <p class="fw-bolder">Twoway binding!</p>
-            Enter Your Name:<input type="text" class="form-control" [(ngModel)]="fullname"/><br/>
-            Your Name is:{{fullname}}<br/><br/>
-            
-            
+            Enter Your Name:<input type="text" class="form-control" [(ngModel)]="fullname" /><br />
+            Your Name is:<span class="text-primary fw-bolder"> {{fullname}} </span>
+            <br /><br />
+
+
             <p>Property Binding!</p>
-            <img alt="item" [src]="itemImageUrl" class="h-50 w-50"><br/>
-            <br/>
-            
+            <img alt="item" [src]="itemImageUrl" class="h-50 w-50"><br />
+            <br />
+
             <p>event Binding!</p>
-            
+
             <button class="btn btn-primary" (click)="onClick()">click</button>
-            
+
             <h5 *ngIf="h1style">event binding works</h5>
         </div>
     </div>
