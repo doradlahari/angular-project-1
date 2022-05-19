@@ -33,6 +33,7 @@ import { UserComponent } from './user/user.component'
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { BindingComponent } from './binding/binding.component';
+import { OAuthModule } from 'angular-oauth2-oidc';
 PlotlyModule.plotlyjs = PlotlyJS;
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ PlotlyModule.plotlyjs = PlotlyJS;
     FormsModule,
     CommonModule,
     PlotlyModule,
-    HttpClientModule
+    HttpClientModule,
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

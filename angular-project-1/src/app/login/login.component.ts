@@ -1,20 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { lastValueFrom } from 'rxjs';
+import { GoogleApiService, UserInfo } from '../google-api.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.sass']
 })
 export class LoginComponent implements OnInit {
+  title = 'angular-google-oauth-example';
 
+  mailSnippets: string[] = []
+  userInfo?: UserInfo;
   [x: string]: any;
   users: any;
   registerform!: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private readonly googleApi: GoogleApiService , private formBuilder: FormBuilder, private router: Router) { 
+    googleApi.userProfileSubject.subscribe( info => {
+      this.userInfo = info
+    })
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.registerform = this.formBuilder.group(
       {
         FirstName: ['', [ Validators.minLength(4), Validators.required,Validators.pattern("^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$")]],
@@ -42,9 +51,9 @@ export class LoginComponent implements OnInit {
         validators: this.MustMatch('password', 'repassword')
       },
 
-    );
+    )
   }
-
+ 
 
 
   get f(): { [key: string]: AbstractControl } {
@@ -80,9 +89,27 @@ export class LoginComponent implements OnInit {
 
     console.log(JSON.stringify(this.registerform.value, null, 2));
   }
-  onReset(): void {
-    this.submitted = false;
-    this.registerform.reset();
+
+  isLoggedIn(): boolean {
+    return this.googleApi.isLoggedIn()
   }
 
+  logout() {
+    this.googleApi.signOut()
+  }
+  async getEmails() {
+    if (!this.userInfo) {
+      return;
+    }
+ const userId = this.userInfo?.info.sub as string
+    const messages = await lastValueFrom(this.googleApi.emails(userId))
+    messages.messages.forEach( (element: any) => {
+      const mail = lastValueFrom(this.googleApi.getMail(userId, element.id))
+      mail.then( mail => {
+        this.mailSnippets.push(mail.snippet)
+      })
+    });
+  }
 }
+
+
