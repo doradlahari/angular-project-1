@@ -35,6 +35,8 @@ import { ChildComponent } from './child/child.component';
 import { BindingComponent } from './binding/binding.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
 PlotlyModule.plotlyjs = PlotlyJS;
+
+
 @NgModule({
   declarations: [
     AppComponent,
