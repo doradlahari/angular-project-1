@@ -34,6 +34,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { BindingComponent } from './binding/binding.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { YoutuubeComponent } from './youtuube/youtuube.component';
 PlotlyModule.plotlyjs = PlotlyJS;
 
 
@@ -65,7 +66,8 @@ PlotlyModule.plotlyjs = PlotlyJS;
     UserComponent,
     ParentComponent,
     ChildComponent,
-    BindingComponent
+    BindingComponent,
+    YoutuubeComponent
  
   ],
   imports: [
