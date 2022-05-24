@@ -1,0 +1,132 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <i class="fa fa-search fa-lg text-warning"></i> Yamaha Bike Showroom
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home">
+                        <i class="fa fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa fa-tools"></i> Our Services </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/services">Software Marketing</a></li>
+                        <li><a class="dropdown-item" routerLink="/software-marketing">Content Writing</a></li>
+                        <li><a class="dropdown-item" routerLink="/consultancy">Software Testing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact-us">
+                        <i class="fa fa-map-marker"></i> Contact Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/graphs">
+                        <i class="fa fa-chart-area"></i> Graphs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/crud">
+                        <i class="fa fa-building"></i> CRUD
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/onchange" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa fa-clock"></i> Life Cycle Hooks </a>
+                    <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/onit">ngOnIt</a></li>
+                        <li><a class="dropdown-item" routerLink="/onchange">Onchange</a></li>
+                    </ul> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/binding" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa fa-clock"></i> Data Binding </a>
+                    <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/onit">ngOnIt</a></li>
+                        <li><a class="dropdown-item" routerLink="/onchange">Onchange</a></li>
+                    </ul> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/grid" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa fa-clock"></i> AG Grid </a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            <div class="card mt-5 text-center border border-danger p-1">
+                <div class="card-head">
+                    <h3 class="fw-bolder"> What is AG Grid? </h3>
+                </div>
+                <div class="card-body">
+                    <p> ag-Grid provides a feature to display the data in proper grid format with filtering and sorting
+                        features already included in it and many more. Ag-grid is a fully-featured and highly
+                        customizable javascript data grid. Create a new Angular project using the following NPM command:
+                        ng new ag-gridExample. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-lg-4">
+            <div class="card rounded text-center border border-success p-2">
+                <div class="card-head">
+                    <h3 class="fw-bolder"> What is sorting? </h3>
+                </div>
+                <hr />
+                <div class="card-body">
+                    <p>The Grid component has support to sort data bound columns in ascending or descending order. This
+                        can be achieved by setting allowSorting property as true. To dynamically sort a particular
+                        column, click on its column header.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card rounded text-center border border-success p-2">
+                <div class="card-head">
+                    <h3 class="fw-bolder"> What is Filtering? </h3>
+                </div>
+                <hr />
+                <div class="card-body">
+                    <ol>
+                        <li>currency Format a number to a currency format.</li>
+                        <li> date Format a date to a specified format.</li>
+                        <li> filter Select a subset of items from an array.</li>
+                        <li> json Format an object to a JSON string.</li>
+                        <li> limitTo Limits an array/string, into a specified number of elements/characters.</li>
+                        <li> lowercase Format a string to lower case.</li>
+                        <li>   number Format a number to a string.</li>
+                        <li> orderBy Orders an array by an expression.</li>
+                        <li> uppercase Format a string to upper case.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-12 text-center">
+                <h1 (click)="grid()"> Grid Example starts Here </h1>
+            </div>
+        </div>
+    </div>
+</div>
