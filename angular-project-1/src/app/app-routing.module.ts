@@ -7,6 +7,7 @@ import { ContactManagerComponent } from './contact-manager/contact-manager.compo
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CrudComponent } from './crud/crud.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
+import { GridComponent } from './grid/grid.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MarketingComponent } from './marketing/marketing.component';
@@ -25,6 +26,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { UserComponent } from './user/user.component';
 import { UsersComponent } from './users/users.component';
 import { ViewContactComponent } from './view-contact/view-contact.component';
+
 
 const routes: Routes = [
   { path: '', component: SignInComponent }, //login
@@ -51,7 +53,8 @@ const routes: Routes = [
   {path:'parent',component:ParentComponent},
   {path:'binding',component:BindingComponent},
   {path:'user',component:UserComponent},
-  {path:'users',component:UsersComponent}
+  {path:'users',component:UsersComponent},
+  {path:'grid',component:GridComponent}
 
 
 ];
