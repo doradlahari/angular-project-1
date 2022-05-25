@@ -36,6 +36,8 @@ import { BindingComponent } from './binding/binding.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { YoutuubeComponent } from './youtuube/youtuube.component';
 import { GridComponent } from './grid/grid.component';
+import { SortComponent } from './sort/sort.component';
+import {UserService} from "./user-services/UserService";
 PlotlyModule.plotlyjs = PlotlyJS;
 
 
@@ -69,7 +71,8 @@ PlotlyModule.plotlyjs = PlotlyJS;
     ChildComponent,
     BindingComponent,
     YoutuubeComponent,
-    GridComponent
+    GridComponent,
+    SortComponent
  
   ],
   imports: [
@@ -82,7 +85,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
     HttpClientModule,
     OAuthModule.forRoot()
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
