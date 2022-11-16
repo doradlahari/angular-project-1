@@ -19,7 +19,7 @@ import { CrudComponent } from './crud/crud.component';
 import { ContactManagerComponent } from './contact-manager/contact-manager.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { ViewContactComponent } from './view-contact/view-contact.component';
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 import { OnchangeLifeHookComponent } from './onchange-life-hook/onchange-life-hook.component';
 import { OnInItLifeHookComponent } from './on-in-it-life-hook/on-in-it-life-hook.component';
 import { NgdocheckLifeHookComponent } from './ngdocheck-life-hook/ngdocheck-life-hook.component';
@@ -36,8 +36,8 @@ import { BindingComponent } from './binding/binding.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { YoutuubeComponent } from './youtuube/youtuube.component';
 import { GridComponent } from './grid/grid.component';
-import { SortComponent } from './sort/sort.component';
-import {UserService} from "./user-services/UserService";
+// import { SortComponent } from './sort/sort.component';
+// import {UserService} from "./user-services/UserService";
 PlotlyModule.plotlyjs = PlotlyJS;
 
 
@@ -72,8 +72,8 @@ PlotlyModule.plotlyjs = PlotlyJS;
     BindingComponent,
     YoutuubeComponent,
     GridComponent,
-    SortComponent
- 
+    // SortComponent
+
   ],
   imports: [
     BrowserModule,
@@ -85,7 +85,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
     HttpClientModule,
     OAuthModule.forRoot()
   ],
-  providers: [UserService],
+  // providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
